@@ -1,6 +1,7 @@
 import subprocess
+import os
 
-password = "admin123"
+cmd = input("Enter command: ").split()
+subprocess.run(cmd)
 
-cmd = input("Enter command: ")
-subprocess.call(cmd, shell=True)
+password = os.getenv("APP_PASSWORD")
