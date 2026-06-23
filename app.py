@@ -1,7 +1,9 @@
-import subprocess
 import os
 
-cmd = input("Enter command: ").split()
-subprocess.run(cmd)
+name = input("Enter your name: ")
+print(f"Hello, {name}")
 
-password = os.getenv("APP_PASSWORD")
+app_password = os.getenv("APP_PASSWORD")
+
+if app_password:
+    print("Environment variable loaded successfully")
